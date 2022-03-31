@@ -21,15 +21,15 @@ export const TOKEN_PROGRAM_ID = new PublicKey(
 
 export const STR_PROGRAM_ID = new PublicKey(
   process.env.REACT_APP_STR_PROGRAM_ID ||
-    '5P3giWpPBrVKL8QP8roKM7NsLdi3ie1Nc2b5r9mGtvwb',
+    'FuSZkVMihAtrZYfD2UUqnRDcCmbW6XqvrPWWAWxc8LM7',
 );
 
 export const SWAP_PROGRAM_ID = new PublicKey(
   process.env.REACT_APP_SWAP_PROGRAM_ID ||
-    'FuSZkVMihAtrZYfD2UUqnRDcCmbW6XqvrPWWAWxc8LM7',
+    'En3jYk8Y68PkMYgzZ1bL7oDDTpSUHDJgwGdM1LsrRfCu',
 );
 
 export const HOST_FEE_VAULT = new PublicKey(
   process.env.REACT_APP_HOST_FEE_VAULT ||
-    '8k1JM5Cd6Hz7G6Jsq1FSzgRYPyS4RFj9k11Uvt5bgWRP',
+    '5P3giWpPBrVKL8QP8roKM7NsLdi3ie1Nc2b5r9mGtvwb',
 );
