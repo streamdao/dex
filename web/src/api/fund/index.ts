@@ -11,7 +11,7 @@ import { Decimal } from 'decimal.js';
 import BN from 'bn.js';
 import { getWallet, makeTransaction, sendTransaction } from 'api/wallet';
 import {
-  DTF_PROGRAM_ID,
+  STRM_PROGRAM_ID,
   HOST_FEE_VAULT,
   SWAP_PROGRAM_ID,
   TOKEN_PROGRAM_ID,
@@ -214,7 +214,7 @@ export class Fund {
 
     const [authority] = await PublicKey.findProgramAddress(
       [fund.pubkey.toBuffer()],
-      DTF_PROGRAM_ID,
+      STRM_PROGRAM_ID,
     );
 
     const userPoolTokenAccount = await createAccountByMint(
@@ -373,7 +373,7 @@ export class Fund {
 
     instructions.push(
       FUND.createExecuteInstruction(
-        DTF_PROGRAM_ID,
+        STRM_PROGRAM_ID,
         fund.pubkey,
         poolTokenMint,
         fundVaultAccounts,
