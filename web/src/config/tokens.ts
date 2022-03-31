@@ -12,7 +12,7 @@ export const TOKENS = {
         'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/solana/info/logo.png',
       },
       {
-      tokenSymbol: 'STRM',
+      tokenSymbol: 'STR',
       mintAddress: '5P3giWpPBrVKL8QP8roKM7NsLdi3ie1Nc2b5r9mGtvwb',
       tokenName: 'Stream Token',
       icon:

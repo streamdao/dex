@@ -19,8 +19,8 @@ export const TOKEN_PROGRAM_ID = new PublicKey(
   'TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA',
 );
 
-export const STRM_PROGRAM_ID = new PublicKey(
-  process.env.REACT_APP_STRM_PROGRAM_ID ||
+export const STR_PROGRAM_ID = new PublicKey(
+  process.env.REACT_APP_STR_PROGRAM_ID ||
     '5P3giWpPBrVKL8QP8roKM7NsLdi3ie1Nc2b5r9mGtvwb',
 );
 

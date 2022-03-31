@@ -45,7 +45,7 @@ fn main() -> Result<()> {
     let lqd_fee_account = pool_state.lqd_fee_vault.pubkey();
 
     let fund_sol_token_vault_account = pool_state.assets[0].vault_address.pubkey();
-    let fund_strm_token_vault_account = pool_state.assets[0].vault_address.pubkey();
+    let fund_str_token_vault_account = pool_state.assets[0].vault_address.pubkey();
     let fund_ftt_token_vault_account = pool_state.assets[1].vault_address.pubkey();
     let fund_ren_token_vault_account = pool_state.assets[2].vault_address.pubkey();
     let fund_srm_token_vault_account = pool_state.assets[3].vault_address.pubkey();
@@ -55,7 +55,7 @@ fn main() -> Result<()> {
     let fund_usdc_token_vault_account = fund_state.basic_asset.vault_address.pubkey();
 
     let sol_usdc_swap = Keypair::from_base58_string(&env::var("sol_usdc_swap")?);
-    let strm_usdc_swap = Keypair::from_base58_string(&env::var("strm_usdc_swap")?);
+    let str_usdc_swap = Keypair::from_base58_string(&env::var("str_usdc_swap")?);
     let ftt_usdc_swap = Keypair::from_base58_string(&env::var("ftt_usdc_swap")?);
     let ren_usdc_swap = Keypair::from_base58_string(&env::var("ren_usdc_swap")?);
     let srm_usdc_swap = Keypair::from_base58_string(&env::var("srm_usdc_swap")?);
@@ -64,7 +64,7 @@ fn main() -> Result<()> {
     let fida_usdc_swap = Keypair::from_base58_string(&env::var("fida_usdc_swap")?);
 
     let sol_usdc_swap_authority = Pubkey::from_str(&env::var("sol_usdc_swap_authority")?)?;
-    let strm_usdc_swap_authority = Pubkey::from_str(&env::var("strm_usdc_swap_authority")?)?;
+    let str_usdc_swap_authority = Pubkey::from_str(&env::var("str_usdc_swap_authority")?)?;
     let ftt_usdc_swap_authority = Pubkey::from_str(&env::var("ftt_usdc_swap_authority")?)?;
     let ren_usdc_swap_authority = Pubkey::from_str(&env::var("ren_usdc_swap_authority")?)?;
     let srm_usdc_swap_authority = Pubkey::from_str(&env::var("srm_usdc_swap_authority")?)?;
@@ -73,7 +73,7 @@ fn main() -> Result<()> {
     let fida_usdc_swap_authority = Pubkey::from_str(&env::var("fida_usdc_swap_authority")?)?;
 
     let sol_usdc_swap_token_sol = Keypair::from_base58_string(&env::var("sol_usdc_swap_token_sol")?);
-    let strm_usdc_swap_token_strm = Keypair::from_base58_string(&env::var("strm_usdc_swap_token_strm")?);
+    let str_usdc_swap_token_str = Keypair::from_base58_string(&env::var("str_usdc_swap_token_str")?);
     let ftt_usdc_swap_token_ftt = Keypair::from_base58_string(&env::var("ftt_usdc_swap_token_ftt")?);
     let ren_usdc_swap_token_ren = Keypair::from_base58_string(&env::var("ren_usdc_swap_token_ren")?);
     let srm_usdc_swap_token_srm = Keypair::from_base58_string(&env::var("srm_usdc_swap_token_srm")?);
@@ -82,7 +82,7 @@ fn main() -> Result<()> {
     let fida_usdc_swap_token_fida = Keypair::from_base58_string(&env::var("fida_usdc_swap_token_fida")?);
 
     let sol_usdc_swap_token_usdc = Keypair::from_base58_string(&env::var("sol_usdc_swap_token_usdc")?);
-    let strm_usdc_swap_token_usdc = Keypair::from_base58_string(&env::var("strm_usdc_swap_token_usdc")?);
+    let str_usdc_swap_token_usdc = Keypair::from_base58_string(&env::var("str_usdc_swap_token_usdc")?);
     let ftt_usdc_swap_token_usdc = Keypair::from_base58_string(&env::var("ftt_usdc_swap_token_usdc")?);
     let ren_usdc_swap_token_usdc = Keypair::from_base58_string(&env::var("ren_usdc_swap_token_usdc")?);
     let srm_usdc_swap_token_usdc = Keypair::from_base58_string(&env::var("srm_usdc_swap_token_usdc")?);
@@ -91,7 +91,7 @@ fn main() -> Result<()> {
     let fida_usdc_swap_token_usdc = Keypair::from_base58_string(&env::var("fida_usdc_swap_token_usdc")?);
 
     let sol_usdc_swap_pool_token_mint = Keypair::from_base58_string(&env::var("sol_usdc_swap_pool_token_mint")?);
-    let strm_usdc_swap_pool_token_mint = Keypair::from_base58_string(&env::var("strm_usdc_swap_pool_token_mint")?);
+    let str_usdc_swap_pool_token_mint = Keypair::from_base58_string(&env::var("str_usdc_swap_pool_token_mint")?);
     let ftt_usdc_swap_pool_token_mint = Keypair::from_base58_string(&env::var("ftt_usdc_swap_pool_token_mint")?);
     let ren_usdc_swap_pool_token_mint = Keypair::from_base58_string(&env::var("ren_usdc_swap_pool_token_mint")?);
     let srm_usdc_swap_pool_token_mint = Keypair::from_base58_string(&env::var("srm_usdc_swap_pool_token_mint")?);
@@ -100,7 +100,7 @@ fn main() -> Result<()> {
     let fida_usdc_swap_pool_token_mint = Keypair::from_base58_string(&env::var("fida_usdc_swap_pool_token_mint")?);
 
     let sol_usdc_swap_fee = Keypair::from_base58_string(&env::var("sol_usdc_swap_fee")?);
-    let strm_usdc_swap_fee = Keypair::from_base58_string(&env::var("strm_usdc_swap_fee")?);
+    let str_usdc_swap_fee = Keypair::from_base58_string(&env::var("str_usdc_swap_fee")?);
     let ftt_usdc_swap_fee = Keypair::from_base58_string(&env::var("ftt_usdc_swap_fee")?);
     let ren_usdc_swap_fee = Keypair::from_base58_string(&env::var("ren_usdc_swap_fee")?);
     let srm_usdc_swap_fee = Keypair::from_base58_string(&env::var("srm_usdc_swap_fee")?);
@@ -164,7 +164,7 @@ fn main() -> Result<()> {
                 AccountMeta::new(fund_account.pubkey(), false),
                 AccountMeta::new_readonly(initializer_account.pubkey(), true),
                 AccountMeta::new(fund_sol_token_vault_account, false),
-                AccountMeta::new(fund_strm_token_vault_account, false),
+                AccountMeta::new(fund_str_token_vault_account, false),
                 AccountMeta::new(fund_ftt_token_vault_account, false),
                 AccountMeta::new(fund_ren_token_vault_account, false),
                 AccountMeta::new(fund_srm_token_vault_account, false),
@@ -180,13 +180,13 @@ fn main() -> Result<()> {
                 AccountMeta::new(sol_usdc_swap_token_usdc.pubkey(), false),
                 AccountMeta::new(sol_usdc_swap_pool_token_mint.pubkey(), false),
                 AccountMeta::new(sol_usdc_swap_fee.pubkey(), false),
-                // STRM
-                AccountMeta::new_readonly(strm_usdc_swap.pubkey(), false),
-                AccountMeta::new_readonly(strm_usdc_swap_authority, false),
-                AccountMeta::new(strm_usdc_swap_token_strm.pubkey(), false),
-                AccountMeta::new(strm_usdc_swap_token_usdc.pubkey(), false),
-                AccountMeta::new(strm_usdc_swap_pool_token_mint.pubkey(), false),
-                AccountMeta::new(strm_usdc_swap_fee.pubkey(), false),
+                // STR
+                AccountMeta::new_readonly(str_usdc_swap.pubkey(), false),
+                AccountMeta::new_readonly(str_usdc_swap_authority, false),
+                AccountMeta::new(str_usdc_swap_token_str.pubkey(), false),
+                AccountMeta::new(str_usdc_swap_token_usdc.pubkey(), false),
+                AccountMeta::new(str_usdc_swap_pool_token_mint.pubkey(), false),
+                AccountMeta::new(str_usdc_swap_fee.pubkey(), false),
                 // FTT
                 AccountMeta::new_readonly(ftt_usdc_swap.pubkey(), false),
                 AccountMeta::new_readonly(ftt_usdc_swap_authority, false),
@@ -253,7 +253,7 @@ fn main() -> Result<()> {
                 AccountMeta::new(fund_account.pubkey(), false),
                 AccountMeta::new_readonly(initializer_account.pubkey(), true),
                 AccountMeta::new(fund_sol_token_vault_account, false),
-                AccountMeta::new(fund_strm_token_vault_account, false),
+                AccountMeta::new(fund_str_token_vault_account, false),
                 AccountMeta::new(fund_ftt_token_vault_account, false),
                 AccountMeta::new(fund_ren_token_vault_account, false),
                 AccountMeta::new(fund_srm_token_vault_account, false),

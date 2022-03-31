@@ -44,7 +44,7 @@ export const Home = () => {
     <Wrapper>
       <Header />
       <Container>
-        <Title>StreamDAO</Title>
+        <Title>StreamDEX</Title>
         <Description>Non-custodial DEX Traded Funds</Description>
         <FundsStyled />
       </Container>

@@ -2,7 +2,7 @@ import assert from 'assert';
 import { PublicKey } from '@solana/web3.js';
 import { complement, isNil } from 'ramda';
 import { getConnection } from 'api/connection';
-import { STRM_PROGRAM_ID } from 'config';
+import { STR_PROGRAM_ID } from 'config';
 import { findFundsFx } from '..';
 import { Fund } from '../../../../../js/lib/fund';
 
@@ -16,7 +16,7 @@ findFundsFx.use(async () => {
   ];
 
   const unsafeRes = await connection._rpcRequest('getProgramAccounts', [
-    STRM_PROGRAM_ID.toBase58(),
+    STR_PROGRAM_ID.toBase58(),
     {
       commitment: connection.commitment,
       filters,
@@ -28,7 +28,7 @@ findFundsFx.use(async () => {
   if (res.error) {
     throw new Error(
       'failed to get accounts owned by program ' +
-        STRM_PROGRAM_ID.toBase58() +
+        STR_PROGRAM_ID.toBase58() +
         ': ' +
         res.error.message,
     );

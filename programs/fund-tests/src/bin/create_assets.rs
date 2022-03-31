@@ -32,7 +32,7 @@ fn main() -> Result<()> {
     };
 
     // Create assets
-    // SOL, STRM, FTT, REN, SRM, SUSHI, RAY, FIDA, USDC
+    // SOL, STR, FTT, REN, SRM, SUSHI, RAY, FIDA, USDC
 
     let sol_token_mint = if let Ok(base58) = env::var("sol_token_mint") {
         Keypair::from_base58_string(&base58)
@@ -40,10 +40,10 @@ fn main() -> Result<()> {
         token::create_token(&mut client, &initializer_account.pubkey(), 6).print_in_place("sol_token_mint")
     };
 
-    let strm_token_mint = if let Ok(base58) = env::var("strm_token_mint") {
+    let str_token_mint = if let Ok(base58) = env::var("str_token_mint") {
         Keypair::from_base58_string(&base58)
     } else {
-        token::create_token(&mut client, &initializer_account.pubkey(), 6).print_in_place("strm_token_mint")
+        token::create_token(&mut client, &initializer_account.pubkey(), 6).print_in_place("str_token_mint")
     };
 
     let ftt_token_mint = if let Ok(base58) = env::var("ftt_token_mint") {
@@ -97,10 +97,10 @@ fn main() -> Result<()> {
         &mut client,
     );
 
-        let _initializer_strm_token_account = mint_to(
+        let _initializer_str_token_account = mint_to(
         &initializer_account,
-        "initializer_strm_token_account",
-        &strm_token_mint.pubkey(),
+        "initializer_str_token_account",
+        &str_token_mint.pubkey(),
         &mut client,
     );
 
@@ -184,13 +184,13 @@ fn main() -> Result<()> {
         fees.clone(),
     )?;
 
-    let _strm_usdc_swap_data = create_swap(
+    let _str_usdc_swap_data = create_swap(
         &mut client,
         &swap_program_id,
         &initializer_account,
-        "strm_usdc_swap",
-        "strm",
-        &strm_token_mint.pubkey(),
+        "str_usdc_swap",
+        "str",
+        &str_token_mint.pubkey(),
         1_000_000_000000,
         "usdc",
         &usdc_token_mint.pubkey(),

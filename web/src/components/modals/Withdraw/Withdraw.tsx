@@ -115,13 +115,13 @@ export const Withdraw: FC<Props> = ({ close }) => {
         <InvestWrapper>
           <FundInfoWrapper>
             <Avatar size={64} />
-            <FundName>STRM</FundName>
+            <FundName>STR</FundName>
           </FundInfoWrapper>
           <InputsWrapper>
-            <Input prefix="Amount" postfix="STRM" placeholder="0.0" />
+            <Input prefix="Amount" postfix="STR" placeholder="0.0" />
             <AvailableBalanceWrapper>
               <AvailableBalance>
-                Available balance: 12.000 STRM
+                Available balance: 12.000 STR
               </AvailableBalance>
             </AvailableBalanceWrapper>
             <Slider
@@ -135,7 +135,7 @@ export const Withdraw: FC<Props> = ({ close }) => {
         <TransactionInfoWrapper>
           <InfoLine>
             <InfoLeft>You’ll receive:</InfoLeft>
-            <InfoRight>12.000 STRM</InfoRight>
+            <InfoRight>12.000 STR</InfoRight>
           </InfoLine>
           <InfoLine>
             <InfoLeft>Transaction Fee:</InfoLeft>

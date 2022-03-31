@@ -44,7 +44,7 @@ fn main() -> Result<()> {
     };
 
     let sol_token_mint = Keypair::from_base58_string(&env::var("sol_token_mint")?);
-    let strm_token_mint = Keypair::from_base58_string(&env::var("strm_token_mint")?);
+    let str_token_mint = Keypair::from_base58_string(&env::var("str_token_mint")?);
     let ftt_token_mint = Keypair::from_base58_string(&env::var("ftt_token_mint")?);
     let ren_token_mint = Keypair::from_base58_string(&env::var("ren_token_mint")?);
     let srm_token_mint = Keypair::from_base58_string(&env::var("srm_token_mint")?);
@@ -54,7 +54,7 @@ fn main() -> Result<()> {
     let usdc_token_mint = Keypair::from_base58_string(&env::var("usdc_token_mint")?);
 
     let initializer_sol_token_account = Keypair::from_base58_string(&env::var("initializer_sol_token_account")?);
-    let initializer_strm_token_account = Keypair::from_base58_string(&env::var("initializer_strm_token_account")?);
+    let initializer_str_token_account = Keypair::from_base58_string(&env::var("initializer_str_token_account")?);
     let initializer_ftt_token_account = Keypair::from_base58_string(&env::var("initializer_ftt_token_account")?);
     let initializer_ren_token_account = Keypair::from_base58_string(&env::var("initializer_ren_token_account")?);
     let initializer_srm_token_account = Keypair::from_base58_string(&env::var("initializer_srm_token_account")?);
@@ -87,9 +87,9 @@ fn main() -> Result<()> {
         token::create_account(&mut client, &fund_vault_authority, &sol_token_mint.pubkey())
             .print_in_place("fund_sol_token_vault_account");
 
-    let fund_strm_token_vault_account =
-        token::create_account(&mut client, &fund_vault_authority, &strm_token_mint.pubkey())
-            .print_in_place("fund_strm_token_vault_account");
+    let fund_str_token_vault_account =
+        token::create_account(&mut client, &fund_vault_authority, &str_token_mint.pubkey())
+            .print_in_place("fund_str_token_vault_account");
 
     let fund_ftt_token_vault_account =
         token::create_account(&mut client, &fund_vault_authority, &ftt_token_mint.pubkey())
@@ -134,9 +134,9 @@ fn main() -> Result<()> {
        token::transfer_to(
         &mut client,
         &initializer_account,
-        &strm_token_mint.pubkey(),
-        &initializer_strm_token_account.pubkey(),
-        &fund_strm_token_vault_account.pubkey(),
+        &str_token_mint.pubkey(),
+        &initializer_str_token_account.pubkey(),
+        &fund_str_token_vault_account.pubkey(),
         7,
         6,
     );
@@ -232,7 +232,7 @@ fn main() -> Result<()> {
                 AccountMeta::new(fund_account.pubkey(), false),
                 AccountMeta::new(fund_token_mint.pubkey(), false),
                 AccountMeta::new(fund_sol_token_vault_account.pubkey(), false),
-                AccountMeta::new(fund_strm_token_vault_account.pubkey(), false),
+                AccountMeta::new(fund_str_token_vault_account.pubkey(), false),
                 AccountMeta::new(fund_ftt_token_vault_account.pubkey(), false),
                 AccountMeta::new(fund_ren_token_vault_account.pubkey(), false),
                 AccountMeta::new(fund_srm_token_vault_account.pubkey(), false),

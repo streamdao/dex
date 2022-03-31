@@ -5,7 +5,7 @@ export const FUNDS = {
     {
       address: 'HFWxF9iwKKQEsJVysz9n18vHuQCaRrnCgfGhkCuPKZuk',
       fundName: 'StreamDAO',
-      fundSymbol: 'STRM',
+      fundSymbol: 'STR',
       icon: streamdaoImg,
     },
   ],

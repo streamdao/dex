@@ -35,7 +35,7 @@ fn main() -> Result<()> {
     let initializer_account = Keypair::from_base58_string(&env::var("initializer_account")?);
 
     let initializer_sol_token_account = Keypair::from_base58_string(&env::var("initializer_sol_token_account")?);
-    let initializer_strm_token_account = Keypair::from_base58_string(&env::var("initializer_strm_token_account")?);
+    let initializer_str_token_account = Keypair::from_base58_string(&env::var("initializer_str_token_account")?);
     let initializer_ftt_token_account = Keypair::from_base58_string(&env::var("initializer_ftt_token_account")?);
     let initializer_ren_token_account = Keypair::from_base58_string(&env::var("initializer_ren_token_account")?);
     let initializer_srm_token_account = Keypair::from_base58_string(&env::var("initializer_srm_token_account")?);
@@ -44,7 +44,7 @@ fn main() -> Result<()> {
     let initializer_fida_token_account = Keypair::from_base58_string(&env::var("initializer_fida_token_account")?);
     let initializer_assets = [
         initializer_sol_token_account.pubkey(),
-        initializer_strm_token_account.pubkey(),
+        initializer_str_token_account.pubkey(),
         initializer_ftt_token_account.pubkey(),
         initializer_ren_token_account.pubkey(),
         initializer_srm_token_account.pubkey(),
@@ -69,7 +69,7 @@ fn main() -> Result<()> {
     };
 
     let fund_sol_token_vault_account = pool_state.assets[0].vault_address.pubkey();
-    let fund_strm_token_vault_account = pool_state.assets[0].vault_address.pubkey();
+    let fund_str_token_vault_account = pool_state.assets[0].vault_address.pubkey();
     let fund_ftt_token_vault_account = pool_state.assets[1].vault_address.pubkey();
     let fund_ren_token_vault_account = pool_state.assets[2].vault_address.pubkey();
     let fund_srm_token_vault_account = pool_state.assets[3].vault_address.pubkey();
@@ -119,7 +119,7 @@ fn main() -> Result<()> {
                 AccountMeta::new(fund_account.pubkey(), false),
                 AccountMeta::new(fund_token_mint, false),
                 AccountMeta::new(fund_sol_token_vault_account, false),
-                AccountMeta::new(fund_strm_token_vault_account, false),
+                AccountMeta::new(fund_str_token_vault_account, false),
                 AccountMeta::new(fund_ftt_token_vault_account, false),
                 AccountMeta::new(fund_ren_token_vault_account, false),
                 AccountMeta::new(fund_srm_token_vault_account, false),
@@ -129,7 +129,7 @@ fn main() -> Result<()> {
                 AccountMeta::new_readonly(fund_vault_authority, false),
                 AccountMeta::new(initializer_fund_token_account.pubkey(), false),
                 AccountMeta::new(initializer_sol_token_account.pubkey(), false),
-                AccountMeta::new(initializer_strm_token_account.pubkey(), false),
+                AccountMeta::new(initializer_str_token_account.pubkey(), false),
                 AccountMeta::new(initializer_ftt_token_account.pubkey(), false),
                 AccountMeta::new(initializer_ren_token_account.pubkey(), false),
                 AccountMeta::new(initializer_srm_token_account.pubkey(), false),
