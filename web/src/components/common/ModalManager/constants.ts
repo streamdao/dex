@@ -1,0 +1,2 @@
+export const MODAL_INVEST = 'MODAL_INVEST';
+export const MODAL_WITHDRAW = 'MODAL_WITHDRAW';
