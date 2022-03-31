@@ -16,7 +16,7 @@ export const TOKENS = {
       mintAddress: '5P3giWpPBrVKL8QP8roKM7NsLdi3ie1Nc2b5r9mGtvwb',
       tokenName: 'Stream Token',
       icon:
-        'https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/5P3giWpPBrVKL8QP8roKM7NsLdi3ie1Nc2b5r9mGtvwb/logo.png',
+        'https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/5P3giWpPBrVKL8QP8roKM7NsLdi3ie1Nc2b5r9mGtvwb/logo.jpg',
     },
     {
       tokenSymbol: 'FTT',
